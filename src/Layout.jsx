@@ -1,9 +1,12 @@
 import React from 'react';
+import {Container} from "react-bootstrap";
+
+
 
 export function Layout({children}){
     return (
-        <div className="container p-4">
+        <Container className="p-4">
             {children}
-        </div>
+        </Container>
     )
 }

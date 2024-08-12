@@ -3,14 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './custom.scss';
-import App from './App';
 import {Layout} from "./Layout";
+import {Router} from "./Router";
+import {QueryClient, QueryClientProvider} from "react-query";
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <Layout>
-          <App />
-      </Layout>
+      <QueryClientProvider client={queryClient}>
+          <Layout>
+              <Router />
+          </Layout>
+      </QueryClientProvider>
   </React.StrictMode>
 );
