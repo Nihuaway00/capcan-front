@@ -1,6 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {StartCopyPage} from "./pages/StartCopyPage";
 import {MarginSettingsPage} from "./pages/MarginSettingsPage";
+import {AddSellerPage} from "./pages/AddSellerPage";
 
 export function Router(){
     return(
@@ -8,6 +9,7 @@ export function Router(){
             <Routes>
                 <Route path="/set" element={<StartCopyPage/>} />
                 <Route path="/set/margin" element={<MarginSettingsPage/>} />
+                <Route path="/set/add-seller" element={<AddSellerPage/>} />
             </Routes>
         </BrowserRouter>
     )

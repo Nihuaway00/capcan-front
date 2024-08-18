@@ -22,7 +22,7 @@ export function StartCopyPage() {
             <Stack className="mb-4">
                 <Stack direction="horizontal" className="flex justify-content-between mb-4 align-items-center">
                     <h2 className="mb-0">Селлеры</h2>
-                    <IconButton icon={<Plus size={26} />}>
+                    <IconButton href={"/set/add-seller"} icon={<Plus size={26} />}>
                         Добавить селлера
                     </IconButton>
                 </Stack>
