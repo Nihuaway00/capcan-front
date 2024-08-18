@@ -1,6 +1,8 @@
 import React from 'react';
 import {Container, Row, Col, Form, Button, ListGroup, Stack} from 'react-bootstrap';
 import {CopyForm} from "../features/CopyForm";
+import {Plus} from "react-bootstrap-icons";
+import {IconButton} from "../components/IconButton";
 
 export function StartCopyPage() {
 
@@ -18,7 +20,12 @@ export function StartCopyPage() {
             </Stack>
             <CopyForm />
             <Stack className="mb-4">
-                <h5>Sellers</h5>
+                <Stack direction="horizontal" className="flex justify-content-between mb-4 align-items-center">
+                    <h2 className="mb-0">Селлеры</h2>
+                    <IconButton icon={<Plus size={26} />}>
+                        Добавить селлера
+                    </IconButton>
+                </Stack>
                 <ListGroup>
                     <ListGroup.Item>Seller 1</ListGroup.Item>
                     <ListGroup.Item>Seller 2</ListGroup.Item>
