@@ -6,6 +6,7 @@ import './custom.scss';
 import {Layout} from "./Layout";
 import {Router} from "./Router";
 import {QueryClient, QueryClientProvider} from "react-query";
+import {Button, Modal} from "react-bootstrap";
 
 const queryClient = new QueryClient();
 
