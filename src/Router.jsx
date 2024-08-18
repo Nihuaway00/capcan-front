@@ -11,7 +11,7 @@ export function Router(){
                 <Route path="/set" element={<StartCopyPage/>} />
                 <Route path="/set/margin" element={<MarginSettingsPage/>} />
                 <Route path="/set/add-seller" element={<AddSellerPage/>} />
-                <Route path="/set/seller/:{id}" element={<SellerPage/>} />
+                <Route path="/set/seller/:id" element={<SellerPage/>} />
             </Routes>
         </BrowserRouter>
     )
