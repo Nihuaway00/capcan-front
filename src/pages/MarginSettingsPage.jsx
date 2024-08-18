@@ -1,8 +1,15 @@
 import React, {useState} from 'react';
 import {Container, Button, ButtonGroup, Form, NavLink, Row, Col, Stack} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {PageTop} from "../components/PageTop";
 
 export function MarginSettingsPage() {
+    const pageInfo = {
+        title: "Настройка маржинальности",
+        description: "Далее, вам потребуется изменить параметры ваших расходов, для того, чтобы мы могли посчитать маржинальность, а также установить нужную цену на ваш товар",
+        backLink: "/set"
+    }
+
     const [taxSystem, setTaxSystem] = useState('УСН 6%');
     const [expensesFF, setExpensesFF] = useState(100);
     const [otherExpenses, setOtherExpenses] = useState(0);
@@ -19,13 +26,7 @@ export function MarginSettingsPage() {
 
     return (
         <Stack>
-            <NavLink href={"/set"}>Назад</NavLink>
-            <h4>Настройка маржинальности</h4>
-            <p>
-                Далее, вам потребуется изменить параметры ваших расходов, для того, чтобы мы могли посчитать
-                маржинальность, а также установить нужную цену на ваш товар
-            </p>
-
+            <PageTop {...pageInfo}/>
             <Form.Group className="mb-3">
                 <Row>
                     <Form.Label><h6>Налогообложение</h6></Form.Label>
